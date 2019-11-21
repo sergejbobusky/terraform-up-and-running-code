@@ -5,6 +5,12 @@ terraform {
 provider "aws" {
   region = "us-east-2"
 
+  profile    = "edtech"
+
+  assume_role {
+    role_arn     = "arn:aws:iam::491645779220:role/ef-admin"
+  }
+
   # Allow any 2.x version of the AWS provider
   version = "~> 2.0"
 }
